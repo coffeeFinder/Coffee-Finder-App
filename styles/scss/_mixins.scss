@@ -1,5 +1,5 @@
-@mixin headerFont($fontSize) {
-    font-weight: 600;
-    color: white;
+@mixin font($fontSize, $fontWeight, $color:white) {
+    font-weight: $fontWeight;
     font-size: $fontSize;
+    color: $color;
 }

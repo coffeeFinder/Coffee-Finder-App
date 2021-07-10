@@ -2,9 +2,61 @@
 @import 'variables';
 @import 'mixins';
 
-
 body {
     background-color: #804E48;
 }
 
+.wrapper {
+    max-width: 1200px;
+    width: 85%;
+    margin: 0 auto;
+}
 
+i {
+    font-size: 50px;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+div {
+    display: flex;
+    justify-content: space-around;
+    i:nth-child(2n) {
+        padding-top: 0;
+        font-size: 75px;
+        color: red;
+    }
+}
+
+h1 {
+    @include font(4rem, 600);
+    text-align: center;
+}
+
+h2 {
+    @include font(2rem, 600);
+    text-align: center;
+}
+
+p,
+label {
+    @include font(1.5rem, 400)
+}
+
+select,
+button {
+    @include font(1.5rem, 400, black);
+    display: block;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.formSection {
+    background-color: #FFFFFF50;
+    border-radius: 10px;
+    height: 100px;
+    padding: 20px;
+}
