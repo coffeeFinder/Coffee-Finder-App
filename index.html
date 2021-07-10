@@ -8,6 +8,38 @@
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
+    <main class="wrapper">
+        <section>
+            <h1>Coffee Finder</h1>
+            <div>
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+            <h2>Welcome!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, cum? Illum odio voluptate nam sed possimus nostrum? Dignissimos nisi praesentium placeat eum, in porro quasi dolores nostrum dolorum voluptas similique.</p>
+        </section>
+        <section>
+            <form action="#">
+                <label for="community">Choose your neighborhood</label>
+                <select name="community" id="community">
+                    <option value="noSelection" selected disabled="true">Please Choose an Option</option>
+                    <option value="eastYork">East York</option>
+                    <option value="etobicoke">Etobicoke</option>
+                    <option value="northYork">North York</option>
+                    <option value="Scarborough">Scarborough</option>
+                    <option value="york">York</option>
+                    <option value="oldToronto">Old Toronto</option>
+                </select>
+                <button type="submit">Lets go!</button>
+            </form>
+            <ul>
+                <!-- This is where the responses from API will go -->
+            </ul>
+        </section>
+    </main>
+
+
     <script src="app.js"></script>
 </body>
 </html>
