@@ -235,6 +235,91 @@ html {
   overflow: hidden;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-size: 62.5%;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
 body {
   background-color: #804E48;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 85%;
+  margin: 0 auto;
+}
+
+i {
+  font-size: 50px;
+  padding: 10px;
+  padding-top: 20px;
+}
+
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+div i:nth-child(2n) {
+  padding-top: 0;
+  font-size: 75px;
+  color: red;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+}
+
+p,
+label {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: white;
+}
+
+select,
+button {
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: black;
+  display: block;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.formSection {
+  background-color: #FFFFFF50;
+  border-radius: 10px;
+  height: 100px;
+  padding: 20px;
 }
