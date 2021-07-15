@@ -1,5 +1,10 @@
-@mixin font($fontSize, $fontWeight, $color:white) {
-    font-weight: $fontWeight;
-    font-size: $fontSize;
-    color: $color;
-}
+@mixin font(
+    $fontSize,
+    $family:$paragraphFont,
+    $fontWeight,
+    $color:white) {
+        font-size: $fontSize;
+        font-family: $family;
+        font-weight: $fontWeight;
+        color: $color;
+    }

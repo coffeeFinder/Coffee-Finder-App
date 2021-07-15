@@ -1,9 +1,14 @@
 @import 'setup';
 @import 'variables';
 @import 'mixins';
+@import 'mediaQueries';
 
 body {
-    background-color: #804E48;
+    background-image: url(../assets/niceCoffeePic.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
 }
 
 .wrapper {
@@ -13,9 +18,8 @@ body {
 }
 
 i {
-    font-size: 50px;
-    padding: 10px;
-    padding-top: 20px;
+    font-size: 6rem;
+    color: #268B98;
 }
 
 div {
@@ -29,24 +33,31 @@ div {
 }
 
 h1 {
-    @include font(4rem, 600);
+    @include font(4rem, $headerFont, 600);
     text-align: center;
+    font-family: $headerFont;
 }
 
-h2 {
-    @include font(2rem, 600);
+h2,
+h3 {
+    @include font(2rem, $headerFont, 600);
     text-align: center;
 }
 
 p,
-label {
-    @include font(1.5rem, 400)
+label,
+a {
+    @include font(1.5rem, $paragraphFont, 400)
 }
 
 select,
 button {
-    @include font(1.5rem, 400, black);
-    display: block;
+    @include font(1.5rem, $paragraphFont, 400);
+    // display: block;
+    background-color: darkorange;
+    border: 2px solid rgba(114, 76, 48, 1);
+    margin: 5px 0;
+    padding: 5px;
 }
 
 section {
@@ -54,9 +65,42 @@ section {
     flex-direction: column;
 }
 
-.formSection {
-    background-color: #FFFFFF50;
+form {
+    display: flex;
+    flex-wrap: wrap;
+    label {
+        width: 100%;
+    }
+    select {
+        width: calc(70% - 5px);
+        margin-right: 5px;
+    }
+    button {
+        width: 30%;
+    }
+}
+
+.resultsSection {
+    background-color: rgba(114, 76, 48, 0.5);
     border-radius: 10px;
-    height: 100px;
+    min-height: 100px;
     padding: 20px;
+    text-align: center;
+    li {
+        padding-bottom: 15px;
+        h3 {
+            padding-bottom: 5px;
+        }
+        a:hover,
+        a:focus {
+            border-bottom: 2px groove #268B98;
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }

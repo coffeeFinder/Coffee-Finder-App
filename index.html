@@ -5,27 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;700&family=Tourney:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
-    <!-- <script src=“https://kit.fontawesome.com/f975636fc9.js” crossorigin=“anonymous”></script> -->
     <script src="https://kit.fontawesome.com/7decd4fd21.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <main class="wrapper">
+    <main class="wrapper desktop">
         <section>
             <h1>Coffee Finder</h1>
             <div>
                 <i class="fas fa-coffee"></i>
-                <i class="fas fa-mug-hot"></i>
-                <i class="fas fa-coffee"></i>
+                <!-- <i class="fas fa-mug-hot"></i>
+                <i class="fas fa-coffee"></i> -->
             </div>
             <h2>Welcome!</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, cum? Illum odio voluptate nam sed possimus nostrum? Dignissimos nisi praesentium placeat eum, in porro quasi dolores nostrum dolorum voluptas similique.</p>
-        </section>
-        <section class="formSection">
             <form action="#">
                 <label for="community">Choose your neighborhood</label>
                 <select name="community" id="community">
-                    <option value="noSelection" selected disabled="true">Please Choose an Option</option>
+                    <option value="noSelection" selected disabled="true">Pick community</option>
                     <option value="eastYork">East York</option>
                     <option value="etobicoke">Etobicoke</option>
                     <option value="northYork">North York</option>
@@ -35,12 +35,16 @@
                 </select>
                 <button type="submit">Lets go!</button>
             </form>
+        </section>
+        <section class="resultsSection">
             <ul>
                 <!-- This is where the responses from API will go -->
             </ul>
         </section>
     </main>
-
+    <footer>
+        <a href="http://junocollege.com">Created at Juno College</a>
+    </footer>
 
     <script src="app.js"></script>
 </body>

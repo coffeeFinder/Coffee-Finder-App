@@ -235,7 +235,8 @@ html {
   overflow: hidden;
 }
 
-* {
+*,
+a {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -249,8 +250,29 @@ img {
   max-width: 100%;
 }
 
+h1 {
+  margin: 0;
+}
+
+@media (min-width: 1000px) {
+  .desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .desktop section {
+    width: 49%;
+  }
+}
 body {
-  background-color: #804E48;
+  background-image: url(../assets/niceCoffeePic.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
 }
 
 .wrapper {
@@ -260,9 +282,8 @@ body {
 }
 
 i {
-  font-size: 50px;
-  padding: 10px;
-  padding-top: 20px;
+  font-size: 6rem;
+  color: #268B98;
 }
 
 div {
@@ -279,32 +300,42 @@ div i:nth-child(2n) {
 }
 
 h1 {
-  font-weight: 600;
   font-size: 4rem;
+  font-family: "Tourney", cursive;
+  font-weight: 600;
   color: white;
   text-align: center;
+  font-family: "Tourney", cursive;
 }
 
-h2 {
-  font-weight: 600;
+h2,
+h3 {
   font-size: 2rem;
+  font-family: "Tourney", cursive;
+  font-weight: 600;
   color: white;
   text-align: center;
 }
 
 p,
-label {
-  font-weight: 400;
+label,
+a {
   font-size: 1.5rem;
+  font-family: "Inconsolata", monospace;
+  font-weight: 400;
   color: white;
 }
 
 select,
 button {
-  font-weight: 400;
   font-size: 1.5rem;
-  color: black;
-  display: block;
+  font-family: "Inconsolata", monospace;
+  font-weight: 400;
+  color: white;
+  background-color: darkorange;
+  border: 2px solid #724c30;
+  margin: 5px 0;
+  padding: 5px;
 }
 
 section {
@@ -317,9 +348,45 @@ section {
           flex-direction: column;
 }
 
-.formSection {
-  background-color: #FFFFFF50;
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+form label {
+  width: 100%;
+}
+form select {
+  width: calc(70% - 5px);
+  margin-right: 5px;
+}
+form button {
+  width: 30%;
+}
+
+.resultsSection {
+  background-color: rgba(114, 76, 48, 0.5);
   border-radius: 10px;
-  height: 100px;
+  min-height: 100px;
   padding: 20px;
+  text-align: center;
+}
+.resultsSection li {
+  padding-bottom: 15px;
+}
+.resultsSection li h3 {
+  padding-bottom: 5px;
+}
+.resultsSection li a:hover,
+.resultsSection li a:focus {
+  border-bottom: 2px groove #268B98;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
