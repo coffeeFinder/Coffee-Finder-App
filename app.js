@@ -33,6 +33,12 @@ app.formEvent = () => {
   // if ()
   // runs a function that scrolls to results
 
+  // listen for click
+  
+  // when they click
+    // get the value from the select
+      // grab option value
+    // run the fetch with that option
 app.getTheData = (communitySelection) => {
   app.url = new URL('http://proxy.hackeryou.com');
   app.url.search = new URLSearchParams({
@@ -52,21 +58,50 @@ app.getTheData = (communitySelection) => {
     })
     .then(data => {
       console.log(`This is the data for ${communitySelection}`);
-      console.log(data);
+      console.log(data.results);
+      app.displayData(data.results);
     });
 }
 
-
-  // listen for click
-
-  // when they click
-    // get the value from the select
-      // grab option value
-    // run the fetch with that option
-
-  // display the results using a loop
+ // display the results using a loop
     // create an li for each
     // append to the ul in page
+
+app.displayData = (selectedShops) => {
+  console.log(selectedShops);
+
+  const shopList = document.querySelector('ul');
+
+  shopList.innerHTML = '';
+
+  selectedShops.forEach(shop => {
+    const shopName = shop.name;
+
+    const shopAddress = shop.place.properties.street;
+
+    const shopLink = shop.slug;
+    // console.log(shopName, shopAddress);
+
+    const shopListItem = document.createElement('li');
+
+    const itemName = document.createElement('h3');
+
+    itemName.textContent = shopName;
+    shopListItem.appendChild(itemName);
+
+    const itemAddress = document.createElement('a');
+
+    itemAddress.textContent = shopAddress;
+    itemAddress.setAttribute('href' , `http://www.mapquest.ca${shopLink}`)
+    itemAddress.setAttribute('target' , "_blank")
+
+    itemAddress.setAttribute('rel' , "noopener")
+
+    shopListItem.appendChild(itemAddress);  
+    
+    shopList.appendChild(shopListItem);
+  });
+}
 
 app.init = () => {
   app.formEvent();
