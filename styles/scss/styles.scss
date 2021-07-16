@@ -13,6 +13,11 @@ body {
     height: 100vh;
 }
 
+.main { //to add "opacity" to image
+    height: 100vh;
+    background-color: rgba(114, 76, 48, 0.35);
+}
+
 .wrapper {
     max-width: 1200px;
     width: 85%;
@@ -21,46 +26,48 @@ body {
 
 i {
     font-size: 6rem;
-    color: #268B98;
-}
-
-// do we still need this whole div?
-div {
-    display: flex;
-    justify-content: space-around;
-    i:nth-child(2n) {
-        padding-top: 0;
-        font-size: 75px;
-        color: red;
-    }
+    color: #268b98d2;
+    text-align: center;
 }
 
 h1 {
-    @include font(4rem, $headerFont, 600);
+    @include font(8rem, $headerFont, 600);
     text-align: center;
-    font-family: $headerFont;
+    padding: 180px 0 20px;
+    letter-spacing: 5px;
+    -webkit-text-stroke: 1.8px rgba(114, 76, 48);    
+
 }
 
 h2,
 h3 {
-    @include font(2rem, $headerFont, 600);
+    @include font(3rem, $headerFont, 600);
     text-align: center;
 }
 
 p,
 label,
 a {
-    @include font(1.5rem, $paragraphFont, 400)
+    @include font(2.5rem, $paragraphFont, 400);
+    padding: 12px 0;    
+}
+
+p {
+ font-weight: 600;
+  -webkit-text-stroke: 1.4px black;
+  font-size: 3rem;
 }
 
 select,
 button {
-    @include font(1.5rem, $paragraphFont, 400);
+    @include font(2rem, $paragraphFont, 400);
     // display: block;
-    background-color: darkorange;
-    border: 2px solid rgba(114, 76, 48, 1);
+    background-color: rgba(255, 140, 0, 0.81);
+    border: 1px solid rgba(114, 76, 48, 1);
     margin: 5px 0;
     padding: 5px;
+    -webkit-text-stroke: .4px black;
+    font-size: 2.5rem;    
 }
 
 section {
@@ -86,7 +93,6 @@ form {
 .resultsSection {
     background-color: rgba(114, 76, 48, 0.5);
     border-radius: 10px;
-    // height: 250px;
     min-height: 250px;
     height: 45vh;
     margin-top: 15px;

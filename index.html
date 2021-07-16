@@ -12,17 +12,13 @@
     <script src="https://kit.fontawesome.com/7decd4fd21.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <main class="wrapper desktop">
-        <section>
-            <h1>Coffee Finder</h1>
-            <div>
-                <i class="fas fa-coffee"></i>
-                <!-- <i class="fas fa-mug-hot"></i>   DELETE THESE ??
-                <i class="fas fa-coffee"></i> -->
-            </div>
-            <h2>Welcome!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, cum? Illum odio voluptate nam sed possimus nostrum? Dignissimos nisi praesentium placeat eum, in porro quasi dolores nostrum dolorum voluptas similique.</p>
-            <!-- ADD ACTUAL TEXT ?? -->
+    <main class="main">
+        <section class="wrapper">
+            <h1>Coffee Finder</h1>     
+            <i class="fas fa-coffee"></i>
+            <h2>Hi there!</h2>
+            <p>Sometimes, you just really need a coffee. Like, really need a coffee. And so you just want the nearest place with a cup
+            of hot joe. Put your neighbourhood in the drop down and let us tell you where you can go!</p>
             <form action="#">
                 <label for="community">Choose your neighborhood</label>
                 <select name="community" id="community">
@@ -37,7 +33,7 @@
                 <button type="submit">Lets go!</button>
             </form>
         </section>
-        <section class="resultsSection">
+        <section class="resultsSection wrapper">
             <ul>
                 <!-- This is where the responses from API will go -->
             </ul>
