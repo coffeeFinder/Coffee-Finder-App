@@ -1,13 +1,15 @@
 @import 'setup';
 @import 'variables';
 @import 'mixins';
-@import 'mediaQueries';
 
 body {
-    background-image: url(../assets/niceCoffeePic.jpg);
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.1)),
+        url(../assets/niceCoffeePic.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
 }
 
@@ -22,6 +24,7 @@ i {
     color: #268B98;
 }
 
+// do we still need this whole div?
 div {
     display: flex;
     justify-content: space-around;
@@ -83,17 +86,27 @@ form {
 .resultsSection {
     background-color: rgba(114, 76, 48, 0.5);
     border-radius: 10px;
-    min-height: 100px;
+    // height: 250px;
+    min-height: 250px;
+    height: 45vh;
+    margin-top: 15px;
     padding: 20px;
     text-align: center;
-    li {
-        padding-bottom: 15px;
-        h3 {
-            padding-bottom: 5px;
-        }
-        a:hover,
-        a:focus {
-            border-bottom: 2px groove #268B98;
+    ul {
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        padding-top: 20px;
+        // Add an indication for user to scroll down?
+        li {
+            padding-bottom: 20px;
+            margin: auto;
+            h3 {
+                padding-bottom: 5px;
+            }
+            a:hover,
+            a:focus {
+                border-bottom: 3px groove #268B98;
+            }
         }
     }
 }
@@ -103,4 +116,8 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.25)
 }
+
+@import 'mediaQueries';

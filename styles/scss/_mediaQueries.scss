@@ -2,8 +2,14 @@
     .desktop {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         section {
             width: 49%;
         }
+    }
+
+    .resultsSection {
+        height: 65vh;
+        margin-top: 0;
     }
 }

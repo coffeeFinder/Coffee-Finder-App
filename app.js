@@ -94,7 +94,7 @@ app.displayData = (selectedShops) => {
     itemAddress.textContent = shopAddress;
     itemAddress.setAttribute('href' , `http://www.mapquest.ca${shopLink}`)
     itemAddress.setAttribute('target' , "_blank")
-
+    // use consistent quote marks
     itemAddress.setAttribute('rel' , "noopener")
 
     shopListItem.appendChild(itemAddress);  
