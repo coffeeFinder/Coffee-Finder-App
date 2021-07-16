@@ -255,7 +255,8 @@ h1 {
 }
 
 @media (min-width: 1000px) {
-  .desktop {
+  .main {
+    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -263,8 +264,8 @@ h1 {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .desktop section {
-    width: 49%;
+  .main section {
+    width: 42%;
   }
 }
 body {
@@ -275,6 +276,11 @@ body {
   height: 100vh;
 }
 
+.main {
+  height: 100vh;
+  background-color: rgba(114, 76, 48, 0.35);
+}
+
 .wrapper {
   max-width: 1200px;
   width: 85%;
@@ -283,34 +289,24 @@ body {
 
 i {
   font-size: 6rem;
-  color: #268B98;
-}
-
-div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-div i:nth-child(2n) {
-  padding-top: 0;
-  font-size: 75px;
-  color: red;
+  color: #268b98d2;
+  text-align: center;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 8rem;
   font-family: "Tourney", cursive;
   font-weight: 600;
   color: white;
   text-align: center;
-  font-family: "Tourney", cursive;
+  padding: 180px 0 20px;
+  letter-spacing: 5px;
+  -webkit-text-stroke: 1.8px #724c30;
 }
 
 h2,
 h3 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Tourney", cursive;
   font-weight: 600;
   color: white;
@@ -320,22 +316,31 @@ h3 {
 p,
 label,
 a {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-family: "Inconsolata", monospace;
   font-weight: 400;
   color: white;
+  padding: 12px 0;
+}
+
+p {
+  font-weight: 600;
+  -webkit-text-stroke: 1.4px black;
+  font-size: 3rem;
 }
 
 select,
 button {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: "Inconsolata", monospace;
   font-weight: 400;
   color: white;
-  background-color: darkorange;
-  border: 2px solid #724c30;
+  background-color: rgba(255, 140, 0, 0.81);
+  border: 1px solid #724c30;
   margin: 5px 0;
   padding: 5px;
+  -webkit-text-stroke: 0.4px black;
+  font-size: 2.5rem;
 }
 
 section {
@@ -369,7 +374,6 @@ form button {
 .resultsSection {
   background-color: rgba(114, 76, 48, 0.5);
   border-radius: 10px;
-  min-height: 100px;
   padding: 20px;
   text-align: center;
 }
@@ -389,4 +393,5 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center;
+  background-color: rgba(128, 128, 128, 0.409);
 }

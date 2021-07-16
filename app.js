@@ -44,7 +44,7 @@ app.getTheData = (communitySelection) => {
   app.url.search = new URLSearchParams({
     reqUrl: app.apiUrl,
     'params[key]': app.apiKey,
-    'params[pageSize]': 10,
+    'params[pageSize]': 50,
     'params[sort]': 'distance',
     // 'params[q]': 'Coffee',
     'params[category]': ['sic:581228'],

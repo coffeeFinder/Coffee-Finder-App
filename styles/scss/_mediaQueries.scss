@@ -1,9 +1,10 @@
 @media (min-width: 1000px) {
-    .desktop {
+    .main {
+        height: 100vh;
         display: flex;
         justify-content: space-between;
         section {
-            width: 49%;
+            width: 42%;
         }
     }
 }
