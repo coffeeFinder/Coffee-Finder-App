@@ -255,18 +255,13 @@ h1 {
 }
 
 body {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1))), url(../assets/niceCoffeePic.jpg);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.1)), url(../assets/niceCoffeePic.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(114, 76, 48, 0.35))), url(../assets/niceCoffeePic.jpg);
+  background-image: linear-gradient(rgba(114, 76, 48, 0.35)), url(../assets/niceCoffeePic.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;
-}
-
-.main {
-  height: 100vh;
-  background-color: rgba(114, 76, 48, 0.35);
 }
 
 .wrapper {
@@ -287,7 +282,6 @@ h1 {
   font-weight: 600;
   color: white;
   text-align: center;
-  padding: 180px 0 20px;
   letter-spacing: 5px;
   -webkit-text-stroke: 1.8px #724c30;
 }
@@ -362,6 +356,9 @@ form button {
 .resultsSection {
   background-color: rgba(114, 76, 48, 0.5);
   border-radius: 10px;
+  min-height: 250px;
+  height: 45vh;
+  margin-top: 15px;
   padding: 20px;
   text-align: center;
 }
@@ -387,4 +384,29 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+@media (min-width: 1000px) {
+  .main {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main section {
+    width: 49%;
+  }
+
+  .resultsSection {
+    height: 65vh;
+    margin-top: 0;
+  }
 }
