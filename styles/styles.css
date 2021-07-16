@@ -254,25 +254,13 @@ h1 {
   margin: 0;
 }
 
-@media (min-width: 1000px) {
-  .main {
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .main section {
-    width: 42%;
-  }
-}
 body {
-  background-image: url(../assets/niceCoffeePic.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1))), url(../assets/niceCoffeePic.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1)), url(../assets/niceCoffeePic.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
 }
 
@@ -377,15 +365,21 @@ form button {
   padding: 20px;
   text-align: center;
 }
-.resultsSection li {
-  padding-bottom: 15px;
+.resultsSection ul {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  padding-top: 20px;
 }
-.resultsSection li h3 {
+.resultsSection ul li {
+  padding-bottom: 20px;
+  margin: auto;
+}
+.resultsSection ul li h3 {
   padding-bottom: 5px;
 }
-.resultsSection li a:hover,
-.resultsSection li a:focus {
-  border-bottom: 2px groove #268B98;
+.resultsSection ul li a:hover,
+.resultsSection ul li a:focus {
+  border-bottom: 3px groove #268B98;
 }
 
 footer {
@@ -393,5 +387,4 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center;
-  background-color: rgba(128, 128, 128, 0.409);
 }
