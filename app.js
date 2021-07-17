@@ -1,7 +1,5 @@
 const app = {};
 
-// fetch API json file
-
 app.apiUrl = 'http://www.mapquestapi.com/search/v4/place';
 app.apiKey = 'z5ozkhvGgMEVbz9RpjyRNgJXPaL5o5DG';
 
@@ -22,23 +20,16 @@ const form = document.querySelector('form');
 app.formEvent = () => {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    // get the value from the select
     const userSelection = document.querySelector('select');
-    // console.log(userSelection.value);
+    
+    // run the fetch with that option
     app.getTheData(userSelection.value);
   });
 }
 
-  // get the value from select
-  // run the fetch with that option
-  // if ()
-  // runs a function that scrolls to results
-
-  // listen for click
-  
-  // when they click
-    // get the value from the select
-      // grab option value
-    // run the fetch with that option
+// Requesting data from API using user's data
 app.getTheData = (communitySelection) => {
   app.url = new URL('http://proxy.hackeryou.com');
   app.url.search = new URLSearchParams({
@@ -46,59 +37,41 @@ app.getTheData = (communitySelection) => {
     'params[key]': app.apiKey,
     'params[pageSize]': 50,
     'params[sort]': 'distance',
-    // 'params[q]': 'Coffee',
     'params[category]': ['sic:581228'],
     'params[location]': app.communities[communitySelection],
-    // sic:581228 = coffee shops
-    // sic:581214 = cafes
   });
   fetch(app.url)
     .then(response => {
       return response.json();
     })
-    .then(data => {
-      console.log(`This is the data for ${communitySelection}`);
-      console.log(data.results);
+    .then(data => { 
       app.displayData(data.results);
     });
 }
 
- // display the results using a loop
-    // create an li for each
-    // append to the ul in page
-
+// display the results using a loop
 app.displayData = (selectedShops) => {
-  console.log(selectedShops);
-
   const shopList = document.querySelector('ul');
-
   shopList.innerHTML = '';
-
+  //Create a for loop to loop through results
   selectedShops.forEach(shop => {
     const shopName = shop.name;
-
     const shopAddress = shop.place.properties.street;
-
     const shopLink = shop.slug;
-    // console.log(shopName, shopAddress);
 
+    // create an elements for each
     const shopListItem = document.createElement('li');
-
     const itemName = document.createElement('h3');
-
     itemName.textContent = shopName;
     shopListItem.appendChild(itemName);
-
     const itemAddress = document.createElement('a');
-
     itemAddress.textContent = shopAddress;
-    itemAddress.setAttribute('href' , `http://www.mapquest.ca${shopLink}`)
-    itemAddress.setAttribute('target' , "_blank")
-    // use consistent quote marks
-    itemAddress.setAttribute('rel' , "noopener")
-
+    itemAddress.setAttribute('href' , `http://www.mapquest.ca${shopLink}`);
+    itemAddress.setAttribute('target' , '_blank');
+    itemAddress.setAttribute('rel' , 'noopener');
     shopListItem.appendChild(itemAddress);  
-    
+
+    // append to the ul in page
     shopList.appendChild(shopListItem);
   });
 }

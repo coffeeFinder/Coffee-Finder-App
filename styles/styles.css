@@ -261,7 +261,6 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  height: 100vh;
 }
 
 .wrapper {
@@ -278,6 +277,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
 }
 
 h1 {
@@ -286,7 +286,6 @@ h1 {
   font-weight: 600;
   color: white;
   letter-spacing: 5px;
-  text-align: center;
   padding-top: 30px;
   -webkit-text-stroke: 1px #724c30;
 }
@@ -294,7 +293,6 @@ h1 {
 i {
   font-size: 4.75rem;
   color: #268b98d2;
-  text-align: center;
   padding: 10px 0;
 }
 
@@ -303,7 +301,6 @@ h2 {
   font-family: "Tourney", cursive;
   font-weight: 600;
   color: white;
-  text-align: center;
   margin-bottom: 10px;
 }
 
@@ -329,7 +326,14 @@ form {
   padding: 10px 15px;
 }
 form label {
+  text-align: center;
   width: 100%;
+  font-size: 2rem;
+  font-family: "Inconsolata", monospace;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 2px;
+  padding: 12px 0;
 }
 form select {
   width: calc(65% - 5px);
@@ -337,16 +341,6 @@ form select {
 }
 form button {
   width: 35%;
-}
-
-label {
-  text-align: center;
-  font-size: 2rem;
-  font-family: "Inconsolata", monospace;
-  font-weight: 700;
-  color: white;
-  letter-spacing: 2px;
-  padding: 12px 0;
 }
 
 select,
@@ -386,14 +380,12 @@ a {
 }
 .resultsSection ul li {
   padding-bottom: 20px;
-  margin: auto;
 }
 .resultsSection ul li h3 {
   font-size: 2.5rem;
   font-family: "Tourney", cursive;
   font-weight: 400;
   color: white;
-  text-align: center;
   padding-bottom: 5px;
 }
 .resultsSection ul li a:hover,
@@ -408,7 +400,7 @@ footer {
 }
 
 @media (min-width: 1050px) {
-  .main {
+  main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -420,7 +412,7 @@ footer {
             align-items: center;
     padding-top: 100px;
   }
-  .main section {
+  main section {
     width: 49%;
   }
 
@@ -434,26 +426,20 @@ footer {
   }
 
   h2,
-h3 {
+h3,
+p {
     font-size: 3rem;
   }
 
-  label,
-a {
-    text-align: left;
+  form label,
+a,
+select,
+button {
     font-size: 2.5rem;
   }
 
   p {
-    font-size: 3rem;
-    background-color: none;
-    border-radius: 0;
     -webkit-text-stroke: 0.4px black;
-  }
-
-  select,
-button {
-    font-size: 2.5rem;
   }
 
   .resultsSection {
