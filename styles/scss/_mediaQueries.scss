@@ -1,16 +1,17 @@
 @media (min-width: 1050px) {
     main {
+        width: 90%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 100px;
+        padding-top: 50px;
         section {
             width: 49%;
         }
     }
 
     h1 {
-    font-size: 8rem;
+    font-size: 7rem;
     padding-top: 0;
     }
 
@@ -19,9 +20,12 @@
     }
 
     h2,
-    h3,
-    p {
+    h3 {
         font-size: 3rem;
+    }
+
+    p {
+        font-size: 2.5rem;
     }
 
     form label,
