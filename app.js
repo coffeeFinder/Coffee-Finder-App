@@ -1,6 +1,6 @@
 const app = {};
 
-app.apiUrl = 'http://www.mapquestapi.com/search/v4/place';
+app.apiUrl = 'https://www.mapquestapi.com/search/v4/place';
 app.apiKey = 'z5ozkhvGgMEVbz9RpjyRNgJXPaL5o5DG';
 
 // center points of communities
