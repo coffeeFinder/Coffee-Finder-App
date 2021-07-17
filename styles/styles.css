@@ -270,61 +270,6 @@ body {
   margin: 0 auto;
 }
 
-i {
-  font-size: 6rem;
-  color: #268b98d2;
-  text-align: center;
-}
-
-h1 {
-  font-size: 8rem;
-  font-family: "Tourney", cursive;
-  font-weight: 600;
-  color: white;
-  text-align: center;
-  letter-spacing: 5px;
-  -webkit-text-stroke: 1.8px #724c30;
-}
-
-h2,
-h3 {
-  font-size: 3rem;
-  font-family: "Tourney", cursive;
-  font-weight: 600;
-  color: white;
-  text-align: center;
-}
-
-p,
-label,
-a {
-  font-size: 2.5rem;
-  font-family: "Inconsolata", monospace;
-  font-weight: 400;
-  color: white;
-  padding: 12px 0;
-}
-
-p {
-  font-weight: 600;
-  -webkit-text-stroke: 1.4px black;
-  font-size: 3rem;
-}
-
-select,
-button {
-  font-size: 2rem;
-  font-family: "Inconsolata", monospace;
-  font-weight: 400;
-  color: white;
-  background-color: rgba(255, 140, 0, 0.81);
-  border: 1px solid #724c30;
-  margin: 5px 0;
-  padding: 5px;
-  -webkit-text-stroke: 0.4px black;
-  font-size: 2.5rem;
-}
-
 section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -335,30 +280,102 @@ section {
           flex-direction: column;
 }
 
+h1 {
+  font-size: 5rem;
+  font-family: "Tourney", cursive;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 5px;
+  text-align: center;
+  padding-top: 30px;
+  -webkit-text-stroke: 1px #724c30;
+}
+
+i {
+  font-size: 4.75rem;
+  color: #268b98d2;
+  text-align: center;
+  padding: 10px 0;
+}
+
+h2 {
+  font-size: 3rem;
+  font-family: "Tourney", cursive;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 2rem;
+  font-family: "Inconsolata", monospace;
+  font-weight: 400;
+  color: white;
+  background-color: rgba(114, 76, 48, 0.5);
+  border-radius: 10px;
+  padding: 15px;
+}
+
 form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  background-color: rgba(255, 140, 0, 0.81);
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px 15px;
 }
 form label {
   width: 100%;
 }
 form select {
-  width: calc(70% - 5px);
+  width: calc(65% - 5px);
   margin-right: 5px;
 }
 form button {
-  width: 30%;
+  width: 35%;
+}
+
+label {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Inconsolata", monospace;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 2px;
+  padding: 12px 0;
+}
+
+select,
+button {
+  font-size: 1.75rem;
+  font-family: "Inconsolata", monospace;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 1px;
+  background-color: saddlebrown;
+  border: 1px solid #724c30;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+a {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Inconsolata", monospace;
+  font-weight: 400;
+  color: white;
 }
 
 .resultsSection {
   background-color: rgba(114, 76, 48, 0.5);
   border-radius: 10px;
   min-height: 250px;
-  height: 45vh;
-  margin-top: 15px;
+  height: 40vh;
+  margin: 15px 0;
   padding: 20px;
   text-align: center;
 }
@@ -372,6 +389,11 @@ form button {
   margin: auto;
 }
 .resultsSection ul li h3 {
+  font-size: 2.5rem;
+  font-family: "Tourney", cursive;
+  font-weight: 400;
+  color: white;
+  text-align: center;
   padding-bottom: 5px;
 }
 .resultsSection ul li a:hover,
@@ -380,17 +402,13 @@ form button {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   text-align: center;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.25);
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1050px) {
   .main {
-    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -400,13 +418,52 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-top: 100px;
   }
   .main section {
     width: 49%;
   }
 
+  h1 {
+    font-size: 8rem;
+    padding-top: 0;
+  }
+
+  i {
+    font-size: 6rem;
+  }
+
+  h2,
+h3 {
+    font-size: 3rem;
+  }
+
+  label,
+a {
+    text-align: left;
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 3rem;
+    background-color: none;
+    border-radius: 0;
+    -webkit-text-stroke: 0.4px black;
+  }
+
+  select,
+button {
+    font-size: 2.5rem;
+  }
+
   .resultsSection {
-    height: 65vh;
-    margin-top: 0;
+    height: 75vh;
+    margin: 0;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.2);
   }
 }
