@@ -42,11 +42,18 @@ app.getTheData = (communitySelection) => {
   });
   fetch(app.url)
     .then(response => {
-      return response.json();
+      if (response.status === 200) {
+        return response.json();
+      } else {
+        throw new Error()
+      }
     })
     .then(data => { 
       app.displayData(data.results);
-    });
+    })
+    .catch((error) => {
+      alert('An error occurred, please try a different browser.')
+    })
 }
 
 // display the results using a loop
